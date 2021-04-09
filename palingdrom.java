@@ -1,24 +1,18 @@
-import java.util.Scanner;
+//Wajp to check user entered string is pangram or not.
 class palingdrom{
 public static void main(String[] args)
 {
-boolean rs=true;
-Scanner in=new Scanner(System.in);
-String s=in.nextLine();
-char c[]=s.toCharArray();
-for(int i=0;i<c.length/2;i++)
+int i,j;
+String s="Jahaj";
+//String lc=s.toLowerCase();
+String uc="";
+for(i=s.length()-1;i>=0;i--)
 {
-for(int j=c.length;j>c.length;j--){
-if(c[i]!=c[j])
-{
-rs=false;
-break;
+uc=uc+s.charAt(i);
 }
-}
-}
-if(rs==true)
-System.out.println("palingdrom");
+if(uc.equalsIgnoreCase(s))
+System.out.println("Palingdrom "+" "+uc);
 else
-System.out.println("not a palingdrom");
+System.out.println("Not a Palingdrom");
 }
 }
